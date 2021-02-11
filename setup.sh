@@ -10,7 +10,7 @@ apt install onionshare -y
 EOF
 sed -i '20 s/^#//' start-debian.sh
 echo "#!/data/data/com.termux/files/usr/bin/bash -e
-echo onionshare $@ | ./$HOME/.debrfs/start-debian.sh" > /data/data/com.termux/files/usr/bin/onionshare
+echo onionshare $@ | bash /$HOME/.debrfs/start-debian.sh" > /data/data/com.termux/files/usr/bin/onionshare
 chmod +x /data/data/com.termux/files/usr/bin/onionshare
 echo
 echo
